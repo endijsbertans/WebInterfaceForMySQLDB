@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/customer/add}" th:object="${customer}" th:method="post">
+    <div >
+        <label for="name" >Vārds</label>
+        <div >
+            <input type="text"  id="name" th:field="*{name}" />
+            <div  th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+        </div>
+    </div>
+
+    <div >
+        <label for="surname" >Uzvārds</label>
+        <div >
+            <input type="text"  id="surname" th:field="*{surname}" />
+            <div th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div>
+        </div>
+    </div>
+
+    <div >
+        <label for="email" >Email</label>
+        <div >
+            <input type="text"  id="email" th:field="*{email}" />
+            <div  th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+    </div>
+
+    <div >
+        <label for="phone" >Telefona nr</label>
+        <div>
+            <input type="text"  id="phone" th:field="*{phone}" />
+            <div th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></div>
+        </div>
+    </div>
+
+    <div >
+        <label for="address" >address</label>
+        <div>
+            <input type="text"  id="address" th:field="*{address}" />
+            <div th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div>
+        </div>
+    </div>
+    <div >
+        <label for="country" >country</label>
+        <div>
+            <input type="text"  id="country" th:field="*{country}" />
+            <div th:if="${#fields.hasErrors('country')}" th:errors="*{country}"></div>
+        </div>
+    </div>
+    <div >
+        <label for="zipCode" >zipCode</label>
+        <div>
+            <input type="text"  id="zipCode" th:field="*{zipCode}" />
+            <div th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}"></div>
+        </div>
+    </div>
+    <div >
+        <div >
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
