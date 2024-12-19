@@ -14,7 +14,6 @@ import lombok.*;
 @Entity
 public class Customer {
 
-    @Setter(value = AccessLevel.NONE)
     @Column(name = "customer_id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,12 +21,12 @@ public class Customer {
 
     @NotNull
     @Column(name = "first_name")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String name;
 
     @NotNull
     @Column(name = "last_name")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String surname;
 
     @NotNull
@@ -41,12 +40,12 @@ public class Customer {
 
     @NotNull
     @Column(name = "address")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String address;
 
     @NotNull
     @Column(name = "country")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String country;
 
     @NotNull
@@ -62,4 +61,5 @@ public class Customer {
         this.country = country;
         this.zipCode = zipCode;
     }
+
 }

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class CustomerServiceImpl implements ICustomerService {
     @Autowired
     private ICustomerRepo customerRepo;
-    @Override
+
     public ArrayList<Customer> retrieveAllCustomers(){
-        return (ArrayList<Customer>) customerRepo.findAll();
+        return customerRepo.getAll();
     }
 }

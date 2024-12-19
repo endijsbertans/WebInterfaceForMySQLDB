@@ -21,12 +21,12 @@ public class Products {
 
     @NotNull
     @Column(name = "product_name")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String productName;
 
     @NotNull
     @Column(name = "category")
-    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ]{1}[a-zēūīļķģšāžčņ]+")
+    @Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀČŅ][a-zēūīļķģšāžčņ]+")
     private String category;
 
     @NotNull
