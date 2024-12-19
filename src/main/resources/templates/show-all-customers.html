@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-bordered">F
+    <thead class="thead-light">
+    <tr>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Phone No</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>Zip Code</th>
+        <th class="bg-danger text-white">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tempPr: ${myObjs}">
+        <td th:text="${tempPr.getCustomerId()}"></td>
+        <td th:text="${tempPr.getName}"></td>
+        <td th:text="${tempPr.getSurname()}"></td>
+        <td th:text="${tempPr.getEmail()}"></td>
+        <td th:text="${tempPr.getAddress()}"></td>
+        <td th:text="${tempPr.getCountry()}"></td>
+        <td th:text="${tempPr.getZipCode()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
